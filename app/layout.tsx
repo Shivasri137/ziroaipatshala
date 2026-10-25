@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InteractionEffects from "@/components/InteractionEffects";
+import PageTransition from "@/components/PageTransition";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const siteBase = siteUrl ? new URL(siteUrl) : undefined;
@@ -25,6 +27,17 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#fbfaf8" };
 
+const themeInitScript = `(()=>{try{const saved=localStorage.getItem("ziro-theme");const prefers=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=saved==="dark"||(!saved&&prefers)?"dark":"light"}catch{document.documentElement.dataset.theme="light"}})()`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><a href="#main-content" className="skip-link">Skip to content</a><Header /><main id="main-content">{children}</main><Footer /></body></html>;
+  return <html lang="en" suppressHydrationWarning>
+    <head><script dangerouslySetInnerHTML={{ __html: themeInitScript }} /></head>
+    <body>
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <InteractionEffects />
+      <Header />
+      <PageTransition><main id="main-content">{children}</main></PageTransition>
+      <Footer />
+    </body>
+  </html>;
 }
