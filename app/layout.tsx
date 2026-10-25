@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   metadataBase: siteBase,
   alternates: siteBase ? { canonical: "/" } : undefined,
   title: {
-    default: "ZIRO AI PATASHALA | Don't Just Learn AI. Build With It.",
+    default: "ZIRO AI PATASHALA | Hands-On AI Education for Schools",
     template: "%s | ZIRO AI PATASHALA",
   },
-  description: "Practical AI education for school students through interactive workshops, AI tools, prompt engineering, and hands-on learning in Telangana and across India.",
+  description: "Explore hands-on AI workshops, guided projects, and practical AI learning experiences for students through ZIRO AI PATASHALA.",
   openGraph: {
     type: "website",
     siteName: "ZIRO AI PATASHALA",
