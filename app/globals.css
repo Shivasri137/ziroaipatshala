@@ -23,3 +23,129 @@
   .mobile-panel{border-top:1px solid var(--line);background:white;padding:12px 18px 18px}
   .mobile-panel a{display:block;padding:13px 2px;color:#353849;font-size:14px;font-weight:650}
 }
+
+/* ZIRO custom theme system */
+:root { color-scheme: light; --cursor-x: 50vw; --cursor-y: 40vh; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f1f2fa;
+  --muted: #b3b7cb;
+  --line: #313346;
+  --paper: #151621;
+  --white: #10111a;
+  --blue: #aaa3ff;
+  --blue-dark: #c6c0ff;
+  --lavender: #282641;
+  --mint: #16362f;
+}
+html { background: var(--white); color-scheme: light; }
+html[data-theme="dark"] { background: #10111a; color-scheme: dark; }
+body {
+  background: var(--white);
+  color: var(--ink);
+  transition: background-color .28s ease, color .28s ease;
+}
+.site-header {
+  background: color-mix(in srgb, var(--white) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+  transition: background-color .28s ease, border-color .28s ease;
+}
+.header-actions, .mobile-header-actions { display: flex; align-items: center; gap: 10px; }
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 42px; padding: 0 13px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--white); color: var(--ink); font-size: 12px; font-weight: 750;
+  cursor: pointer; transition: color .22s ease, background-color .22s ease, border-color .22s ease, transform .18s ease;
+}
+.theme-toggle:hover { border-color: var(--blue); transform: translateY(-1px); }
+.theme-toggle-icon { display: inline-flex; color: var(--blue-dark); }
+.theme-toggle-label { line-height: 1; }
+.theme-toggle-compact { gap: 0; width: 44px; min-width: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
+.theme-toggle-compact .theme-toggle-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+html[data-theme="dark"] .page-hero,
+html[data-theme="dark"] .section-soft { background: var(--paper); border-color: var(--line); }
+html[data-theme="dark"] .card { background: #171925; border-color: var(--line); color: var(--ink); }
+html[data-theme="dark"] .btn-secondary { background: #1a1c2a; color: var(--ink); border-color: #3b3e53; }
+html[data-theme="dark"] .btn-secondary:hover { background: #22243a; border-color: #7770d8; }
+html[data-theme="dark"] .pill { background: #24223c; color: #d7d2ff; border-color: #3b3760; }
+html[data-theme="dark"] .notice { background: #211f35; border-color: #414063; color: #d4d0f4; }
+html[data-theme="dark"] .notice-success { background: #142c27; border-color: #285b4c; color: #b5ead4; }
+html[data-theme="dark"] .notice-error { background: #351d25; border-color: #70404c; color: #ffccd3; }
+html[data-theme="dark"] .form-field input,
+html[data-theme="dark"] .form-field textarea,
+html[data-theme="dark"] .form-field select,
+html[data-theme="dark"] #project-search {
+  background: #131520; color: var(--ink); border-color: #414459;
+}
+html[data-theme="dark"] .form-field input::placeholder,
+html[data-theme="dark"] .form-field textarea::placeholder { color: #888da5; }
+html[data-theme="dark"] .footer { background: #090a10; }
+html[data-theme="dark"] header span { color: var(--muted) !important; }
+html[data-theme="dark"] .nav-links a { color: #c9cbe0 !important; }
+html[data-theme="dark"] .nav-links a[aria-current="page"] { color: var(--blue) !important; }
+html[data-theme="dark"] .mobile-panel { background: #11121c; border-color: var(--line); }
+html[data-theme="dark"] .mobile-panel a { color: #e5e6f2; }
+html[data-theme="dark"] .mobile-panel .btn-primary { color: white; }
+html[data-theme="dark"] .skip-link { background: #e8e7ff; color: #151526; }
+html[data-theme="dark"] [style*="background:white"],
+html[data-theme="dark"] [style*="background: white"],
+html[data-theme="dark"] [style*="background:#fff"],
+html[data-theme="dark"] [style*="background: #fff"] {
+  background-color: #171925 !important;
+}
+html[data-theme="dark"] [style*="color:#171923"],
+html[data-theme="dark"] [style*="color: #171923"],
+html[data-theme="dark"] [style*="color:#343747"],
+html[data-theme="dark"] [style*="color: #343747"],
+html[data-theme="dark"] [style*="color:#414454"],
+html[data-theme="dark"] [style*="color: #414454"],
+html[data-theme="dark"] [style*="color:#484b5b"],
+html[data-theme="dark"] [style*="color: #484b5b"],
+html[data-theme="dark"] [style*="color:#4e5161"],
+html[data-theme="dark"] [style*="color: #4e5161"],
+html[data-theme="dark"] [style*="color:#4f5262"],
+html[data-theme="dark"] [style*="color: #4f5262"],
+html[data-theme="dark"] [style*="color:#55596a"],
+html[data-theme="dark"] [style*="color: #55596a"],
+html[data-theme="dark"] [style*="color:#565a6b"],
+html[data-theme="dark"] [style*="color: #565a6b"] { color: var(--ink) !important; }
+
+/* Dark-only pointer light; the glow never captures clicks or affects touch scrolling. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(520px circle at var(--cursor-x) var(--cursor-y), rgba(111, 101, 255, .15), rgba(71, 96, 255, .055) 32%, transparent 66%);
+  transition: opacity .3s ease;
+}
+html[data-theme="dark"] body::before { opacity: 1; }
+@media (pointer: coarse) { body::before { display: none; } }
+
+/* Small, purposeful feedback on clicks and route changes. */
+button, a.btn, .theme-toggle { position: relative; overflow: hidden; isolation: isolate; }
+button:active, a.btn:active, .theme-toggle:active { transform: scale(.975); }
+.click-ripple {
+  position: absolute; z-index: -1; border-radius: 50%; pointer-events: none;
+  background: currentColor; opacity: .18; transform: scale(0);
+  animation: ziro-ripple .58s ease-out forwards;
+}
+@keyframes ziro-ripple { to { transform: scale(1); opacity: 0; } }
+.route-transition { animation: ziro-route-in .28s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes ziro-route-in { from { opacity: .45; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 960px) {
+  .header-actions { display: none !important; }
+  .mobile-header-actions { display: flex; }
+  .theme-toggle-compact { display: inline-flex; }
+}
+@media (min-width: 961px) {
+  .mobile-header-actions { display: none !important; }
+  .header-actions { display: flex !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body, .site-header, .theme-toggle { transition: none !important; }
+  .route-transition, .click-ripple { animation: none !important; }
+  button:active, a.btn:active, .theme-toggle:active { transform: none !important; }
+}
