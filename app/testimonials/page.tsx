@@ -31,7 +31,7 @@ export default function TestimonialsPage() {
     <section className="section">
       <div className="container">
         <div className="grid-2" style={{ alignItems: "stretch" }}>
-          <div className="card" style={{ padding: "clamp(24px,4vw,36px)", background: "linear-gradient(145deg,#fbfaf8,#f7f6ff)" }}>
+          <div className="card" style={{ padding: "clamp(24px,4vw,36px)", background: "linear-gradient(145deg,var(--paper),var(--surface-soft))" }}>
             <div className="icon-tile"><MessageSquareQuote size={22}/></div>
             <span className="eyebrow" style={{ marginTop: 22 }}>Current status</span>
             <h2 className="subheading" style={{ marginTop: 12 }}>No public testimonials approved yet.</h2>
@@ -53,7 +53,7 @@ export default function TestimonialsPage() {
         <div className="grid-3">
           {publishingSteps.map(item => { const Icon = item.icon; return <article key={item.title} className="card" style={{ padding: 24 }}><div className="icon-tile"><Icon size={21}/></div><h3 style={{ fontSize: 18, fontWeight: 760, lineHeight: 1.4, marginTop: 18 }}>{item.title}</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>{item.text}</p></article>; })}
         </div>
-        <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "19px 0", marginTop: 22, borderTop: "1px solid #dedfe7" }}>
+        <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "19px 0", marginTop: 22, borderTop: "1px solid var(--line)" }}>
           <CheckCircle2 size={19} color="var(--blue)" style={{ flexShrink: 0, marginTop: 2 }}/>
           <p className="body-copy" style={{ fontSize: 13 }}>Children&apos;s names, photos, class details, and personal information are not published without appropriate permission. Parents or guardians should provide permission for a learner under 18.</p>
         </div>
