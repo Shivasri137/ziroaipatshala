@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, BrainCircuit, Check, Lightbulb, MessageSquareText, School, ShieldCheck, Sparkles, Wrench } from "lucide-react";
 import { ButtonLink, CtaBand, SectionTitle } from "@/components/Ui";
+import ImpactProof from "@/components/ImpactProof";
 
 const methods = [
   { icon: BrainCircuit, title: "Understand the idea", copy: "Start with AI fundamentals in clear, age-appropriate language." },
@@ -62,6 +63,7 @@ export default function HomePage() {
       <p style={{ color: "#858899", fontSize: 12, lineHeight: 1.7, marginTop: 16 }}>These names describe workshop experience supplied by the founder; they do not imply an ongoing partnership or endorsement.</p>
       <div style={{ marginTop: 22 }}><ButtonLink href="/contact?interest=school-workshop" secondary>Invite ZIRO to your school</ButtonLink></div>
     </div></section>
+    <ImpactProof />
     <section className="section section-soft"><div className="container"><SectionTitle eyebrow="Ideas in progress" title="From curiosity to creation." description="These are example project ideas that could be explored in a learning session—not completed or verified student projects." href="/projects" linkText="View project ideas" />
       <div className="grid-3">{ideas.map(p=><article className="card" key={p.no} style={{ padding: 24 }}><div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}><span className="eyebrow">Example idea</span><span style={{ color: "#9a9cab", font: "12px ui-monospace" }}>{p.no}</span></div><h3 style={{ fontSize: 20, fontWeight: 750, letterSpacing: "-.03em", marginTop: 24 }}>{p.title}</h3><p className="body-copy" style={{ marginTop: 10 }}>{p.copy}</p><div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginTop: 18 }}>{p.tags.map(t=><span key={t} className="pill">{t}</span>)}</div></article>)}</div>
     </div></section>
@@ -69,6 +71,7 @@ export default function HomePage() {
       <div><span className="eyebrow">Meet the founder</span><h2 className="heading" style={{ marginTop: 15 }}>Learning is better when curiosity has a guide.</h2><p className="body-copy" style={{ marginTop: 17 }}>Shiva Sri Jonnala founded ZIRO AI PATASHALA to make AI education more practical and accessible for students. Through online and offline workshops, the focus is on concepts, useful tools, better questions, and applying what learners discover.</p><div style={{ marginTop: 24 }}><Link href="/about" className="text-link">Read about ZIRO <ArrowRight size={16} /></Link></div></div>
       <div className="founder-mini-card"><Image src="/images/founder-shiva.jpg" alt="Shiva Sri Jonnala, founder of ZIRO AI PATASHALA" width={340} height={510} style={{ width: 150, height: 205, objectFit: "cover", objectPosition: "center top", borderRadius: 15 }} /><div><span className="pill">Founder-led learning</span><h3 style={{ fontSize: 21, letterSpacing: "-.03em", fontWeight: 800, marginTop: 14 }}>Shiva Sri Jonnala</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>Making AI concepts easier to explore, one practical learning experience at a time.</p></div></div>
     </div></section>
+    <section className="section section-soft"><div className="container"><div className="home-feature-layout"><div><span className="eyebrow">Participant feedback</span><h2 className="heading" style={{ marginTop: 15 }}>The best proof comes from real experiences.</h2><p className="body-copy" style={{ marginTop: 13 }}>We are inviting parents, educators, and adult participants to share what happened in their own words. No invented quotes, ratings, or success stories.</p><div style={{ marginTop: 22 }}><Link href="/testimonials" className="text-link">Read our feedback policy <ArrowRight size={16}/></Link></div></div><div className="card" style={{ padding: 25, background: "#fff" }}><div className="icon-tile"><MessageSquareText size={21}/></div><h3 style={{ fontSize: 19, fontWeight: 760, marginTop: 17 }}>Testimonials are being collected.</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>A quote appears publicly only after the wording, display name, and permission are checked. Student identities stay protected.</p><div style={{ marginTop: 18 }}><ButtonLink href="/testimonials" secondary>Share genuine feedback</ButtonLink></div></div></div></div></section>
     <CtaBand title="Ready to explore the world of AI?" description="Discover practical learning experiences for students or start a conversation about bringing a workshop to your school." primaryHref="/contact" primaryText="Contact ZIRO" secondaryHref="/programs" secondaryText="Explore programs" />
   </>;
 }
