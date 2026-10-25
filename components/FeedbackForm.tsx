@@ -112,7 +112,7 @@ Please review this manually. This message does not automatically publish anythin
         <div className="form-field full"><label htmlFor="feedback-display">If approved, display it as</label><select id="feedback-display" value={fields.display} onChange={e => update("display", e.target.value as FeedbackState["display"])}><option value="anonymous">Anonymous</option><option value="first-name">First name only</option><option value="full-name-role">Full name and role</option></select></div>
         <div className="full" style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
           <input id="feedback-adult" type="checkbox" required checked={fields.adultOrGuardian} onChange={e => update("adultOrGuardian", e.target.checked)} style={{ width: 16, height: 16, marginTop: 4, accentColor: "#4f46e5" }} />
-          <label htmlFor="feedback-adult" style={{ fontSize: 12, lineHeight: 1.65, color: "#5f6374" }}>I am an adult, or a parent/guardian helping a learner under 18. I will not submit another child's personal information without appropriate permission. *</label>
+          <label htmlFor="feedback-adult" style={{ fontSize: 12, lineHeight: 1.65, color: "#5f6374" }}>I am an adult, or a parent/guardian helping a learner under 18. I will not submit another child&apos;s personal information without appropriate permission. *</label>
         </div>
         {fields.permission === "approved" && <div className="full" style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
           <input id="feedback-publish-consent" type="checkbox" required checked={fields.quoteConsent} onChange={e => update("quoteConsent", e.target.checked)} style={{ width: 16, height: 16, marginTop: 4, accentColor: "#4f46e5" }} />
