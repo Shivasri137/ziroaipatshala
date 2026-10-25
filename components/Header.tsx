@@ -22,12 +22,12 @@ export default function Header() {
     <div className="container" style={{ minHeight: 78, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18 }}>
       <Link href="/" aria-label="ZIRO AI PATASHALA home" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
         <Image src="/images/ziro-logo.png" alt="ZIRO" width={71} height={82} priority style={{ width: 50, height: 58, objectFit: "contain" }} />
-        <span style={{ marginLeft: 5, fontSize: 10, letterSpacing: ".08em", fontWeight: 800, color: "#656779", whiteSpace: "nowrap" }}>AI PATASHALA</span>
+        <span style={{ marginLeft: 5, fontSize: 10, letterSpacing: ".08em", fontWeight: 800, color: "var(--muted)", whiteSpace: "nowrap" }}>AI PATASHALA</span>
       </Link>
       <nav aria-label="Main navigation" className="desktop-nav nav-links" style={{ display: "flex", alignItems: "center", gap: 20 }}>
         {links.map(link => {
           const active = link.href === "/" ? pathname === "/" : pathname === link.href || pathname.startsWith(link.href + "/");
-          return <Link key={link.href} href={link.href} aria-current={active ? "page" : undefined} style={{ fontSize: 13, fontWeight: active ? 800 : 650, color: active ? "#4338ca" : "#474959", whiteSpace: "nowrap" }}>{link.label}</Link>;
+          return <Link key={link.href} href={link.href} className={`nav-link${active ? " is-active" : ""}`} aria-current={active ? "page" : undefined} style={{ fontSize: 13, fontWeight: active ? 800 : 650, whiteSpace: "nowrap" }}>{link.label}</Link>;
         })}
       </nav>
       <div className="desktop-nav header-actions"><ThemeToggle /><Link className="btn btn-primary" href="/school-workshops#school-enquiry">Book a Workshop <ArrowUpRight size={16} /></Link></div>
