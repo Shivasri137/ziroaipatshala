@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
           {publishingSteps.map(item => { const Icon = item.icon; return <article key={item.title} className="card" style={{ padding: 24 }}><div className="icon-tile"><Icon size={21}/></div><h3 style={{ fontSize: 18, fontWeight: 760, lineHeight: 1.4, marginTop: 18 }}>{item.title}</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>{item.text}</p></article>; })}
         </div>
         <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "19px 0", marginTop: 22, borderTop: "1px solid #dedfe7" }}>
-          <CheckCircle2 size={19} color="#4f46e5" style={{ flexShrink: 0, marginTop: 2 }}/>
+          <CheckCircle2 size={19} color="var(--blue)" style={{ flexShrink: 0, marginTop: 2 }}/>
           <p className="body-copy" style={{ fontSize: 13 }}>Children&apos;s names, photos, class details, and personal information are not published without appropriate permission. Parents or guardians should provide permission for a learner under 18.</p>
         </div>
       </div>
