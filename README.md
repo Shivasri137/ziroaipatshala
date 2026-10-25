@@ -29,6 +29,14 @@ Set `NEXT_PUBLIC_SITE_URL` to the confirmed public URL in your deployment enviro
 ## Enquiry handling
 No fake server submission is shown. The forms validate required fields and then provide WhatsApp and email links, so visitors explicitly choose how to send their enquiry. Add a trusted server-side form provider only after configuring private environment variables, validation, spam protection, and a retention policy.
 
+## Impact and testimonials
+
+The homepage labels founder-reported workshop delivery separately from program scope. The supplied brief reports four offline workshop sessions across three named school venues; no participant count, attendance list, measured learning gain, or approved testimonial text was supplied. Do not convert those missing records into estimated impact metrics.
+
+The testimonials page contains a feedback form that prepares a WhatsApp or email message. The website does not store submissions or publish feedback automatically. A human must review the factual details and confirm the exact quote and display-name permission before publishing. For participants under 18, use appropriate parent/guardian permission and avoid unnecessary identifying information.
+
+For future impact reporting, retain basic session records, actual attendance, brief pre/post learning checks, examples of work completed, and permissioned parent/educator feedback. Publish only values that have been recorded and reviewed.
+
 ## Assets
 - `public/images/ziro-logo.png`: supplied ZIRO logo, preserved in its proportions and colours.
 - `public/images/founder-shiva.jpg`: compressed web version of the supplied founder portrait.
