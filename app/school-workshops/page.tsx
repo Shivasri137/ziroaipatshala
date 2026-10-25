@@ -102,7 +102,7 @@ export default function SchoolWorkshopsPage() {
       <div className="container">
         <div className="section-heading"><div><span className="eyebrow">Previous workshop experience</span><h2 className="heading" style={{ marginTop: 15 }}>A starting record, with context.</h2><p className="body-copy" style={{ marginTop: 12 }}>Founder-supplied information reports four offline workshop sessions across the school venues listed below. These references do not imply current partnerships, institutional endorsements, or school-approved testimonials.</p></div></div>
         <div className="grid-3">{["Sri Chaithanya High School", "KGR High School", "Model School, Kandlapally"].map(name => <article className="card" key={name} style={{ padding: 22, display: "flex", alignItems: "flex-start", gap: 13 }}><div className="icon-tile"><School size={20}/></div><div><h3 style={{ fontSize: 15, fontWeight: 760 }}>{name}</h3><p className="body-copy" style={{ fontSize: 12, marginTop: 6 }}>Venue reference supplied by the founder.</p></div></article>)}</div>
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginTop: 20, padding: "18px 20px", border: "1px solid #e7e6f1", borderRadius: 16 }}>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginTop: 20, padding: "18px 20px", border: "1px solid var(--line)", borderRadius: 16 }}>
           <div style={{ fontSize: 29, fontWeight: 850, letterSpacing: "-.06em", color: "var(--blue-dark)" }}>4</div><div style={{ flex: "1 1 230px" }}><p style={{ fontSize: 14, fontWeight: 750 }}>Offline sessions reported by the founder</p><p className="body-copy" style={{ fontSize: 12, marginTop: 4 }}>Participant totals, dates, grade ranges, and measured learning outcomes have not been supplied for public reporting.</p></div><Link href="/testimonials" className="text-link">Feedback & evidence <ArrowRight size={15}/></Link>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function SchoolWorkshopsPage() {
     <section className="section section-soft">
       <div className="container home-feature-layout">
         <div><span className="eyebrow">Frequently asked questions</span><h2 className="heading" style={{ marginTop: 15 }}>Clear answers before a school books.</h2><p className="body-copy" style={{ marginTop: 12 }}>If a policy or programme detail has not been finalised, we say so and confirm it directly rather than guessing.</p><div style={{ marginTop: 22 }}><ButtonLink href="#school-enquiry">Request a School Workshop Proposal</ButtonLink></div></div>
-        <div style={{ display: "grid", gap: 10 }}>{faqs.map(item => <details key={item.q} style={{ padding: "17px 18px", background: "var(--surface)", border: "1px solid #e5e5ed", borderRadius: 13 }}><summary style={{ cursor: "pointer", fontWeight: 740, fontSize: 14, lineHeight: 1.5 }}>{item.q}</summary><p className="body-copy" style={{ fontSize: 13, marginTop: 11 }}>{item.a}</p></details>)}</div>
+        <div style={{ display: "grid", gap: 10 }}>{faqs.map(item => <details key={item.q} style={{ padding: "17px 18px", background: "var(--surface)", border: "1px solid var(--line)", borderRadius: 13 }}><summary style={{ cursor: "pointer", fontWeight: 740, fontSize: 14, lineHeight: 1.5 }}>{item.q}</summary><p className="body-copy" style={{ fontSize: 13, marginTop: 11 }}>{item.a}</p></details>)}</div>
       </div>
     </section>
 
