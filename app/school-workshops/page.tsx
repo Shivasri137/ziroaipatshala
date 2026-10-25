@@ -1,5 +1,6 @@
 import { Suspense } from "react";
-import { ArrowRight, BookOpenCheck, BrainCircuit, CheckCircle2, ClipboardCheck, Lightbulb, MessageSquareText, School, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowRight, BookOpenCheck, BrainCircuit, CheckCircle2, Lightbulb, MessageSquareText, School, ShieldCheck, Wrench } from "lucide-react";
+import Link from "next/link";
 import { ButtonLink, PageHero } from "@/components/Ui";
 import EnquiryForm from "@/components/EnquiryForm";
 
