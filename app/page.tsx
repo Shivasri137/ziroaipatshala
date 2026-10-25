@@ -17,31 +17,33 @@ const ideas = [
 ];
 export default function HomePage() {
   return <>
-    <section style={{ padding: "70px 0 80px", background: "linear-gradient(180deg,#fbfaf8 0%,#fff 100%)", overflow: "hidden" }}>
+    <section style={{ padding: "64px 0 76px", background: "linear-gradient(180deg,#fbfaf8 0%,#fff 100%)", overflow: "hidden" }}>
       <div className="container home-hero-layout">
         <div>
-          <div className="pill"><Sparkles size={14} /> Practical AI education for curious minds</div>
-          <h1 className="display" style={{ marginTop: 25, maxWidth: 680 }}>Don&apos;t Just Learn AI. <span style={{ color: "#4f46e5" }}>Build With It.</span></h1>
-          <p className="lead" style={{ maxWidth: 575, marginTop: 24 }}>ZIRO AI PATASHALA helps students understand artificial intelligence through interactive workshops, practical AI tools, real-world challenges, and hands-on learning experiences.</p>
-          <p className="body-copy" style={{ maxWidth: 560, marginTop: 12 }}>From AI fundamentals to machine learning, deep learning, and prompt engineering, take your first steps into the world of AI.</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 27 }}><ButtonLink href="/programs">Explore Programs</ButtonLink><ButtonLink href="/contact?interest=AI%20Buddy%20Den" secondary>Enquire for a Workshop</ButtonLink></div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 28, color: "#747788", fontSize: 12 }}><ShieldCheck size={17} color="#4f46e5" /> Learn thoughtfully. Check AI outputs. Create responsibly.</div>
+          <div className="pill"><Sparkles size={14} /> Don&apos;t Just Learn AI. Build With It.</div>
+          <h1 className="display" style={{ marginTop: 24, maxWidth: 650 }}>Future-Ready AI Education <span style={{ color: "#4f46e5" }}>for Schools.</span></h1>
+          <p className="lead" style={{ maxWidth: 590, marginTop: 22 }}>Help students explore artificial intelligence through hands-on workshops, guided activities, and responsible AI learning shaped around their age group and school context.</p>
+          <p className="body-copy" style={{ maxWidth: 580, marginTop: 12 }}>Students explore what AI is, practise writing prompts, examine AI-generated answers, and explain what they discover. The exact scope and session format are agreed with each school.</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 27 }}>
+            <ButtonLink href="/school-workshops#school-enquiry">Book a School Workshop</ButtonLink>
+            <ButtonLink href="/programs" secondary>Explore Programs</ButtonLink>
+          </div>
+          <div style={{ marginTop: 21 }}>
+            <Link href="/programs/ai-buddy-den" className="text-link">For parents and individual learners <ArrowRight size={15}/></Link>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 9, marginTop: 23, color: "#747788", fontSize: 12 }}><ShieldCheck size={17} color="#4f46e5" /> Practical learning. Critical thinking. Responsible use.</div>
         </div>
-        <div className="visual-grid" style={{ padding: "25px 25px 23px", minHeight: 460 }}>
+        <div className="visual-grid" style={{ padding: "clamp(23px,3vw,32px)", minHeight: 435 }}>
           <div className="visual-inner" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-            <div><div style={{ fontSize: 11, letterSpacing: ".13em", color: "#b2b3ca", fontWeight: 750 }}>THE LEARNING LOOP</div><div style={{ fontSize: 21, fontWeight: 750, marginTop: 6 }}>Think → Try → Improve</div></div>
-            <div style={{ borderRadius: 14, border: "1px solid #ffffff22", padding: 10, color: "#c4baff" }}><BrainCircuit size={25} /></div>
+            <div><div style={{ fontSize: 11, letterSpacing: ".13em", color: "#b9bad0", fontWeight: 800 }}>ILLUSTRATIVE WORKSHOP PREVIEW</div><div style={{ fontSize: 22, fontWeight: 760, letterSpacing: "-.03em", marginTop: 8 }}>Learn it. Try it. Explain it.</div></div>
+            <div style={{ borderRadius: 14, border: "1px solid #ffffff2b", padding: 11, color: "#c4baff", flexShrink: 0 }}><School size={25}/></div>
           </div>
-          <div className="visual-inner learning-cards-layout" style={{ marginTop: 24 }}>
-            <div style={{ background: "#ffffff0d", border: "1px solid #ffffff18", borderRadius: 16, padding: 16, minHeight: 123 }}><div style={{ color: "#b5aaff", fontSize: 12, fontWeight: 800 }}>01 / LEARN</div><BookOpen size={23} style={{ marginTop: 17 }} /><div style={{ fontWeight: 700, marginTop: 9 }}>Understand AI</div><div style={{ color: "#b9bbce", fontSize: 12, marginTop: 5 }}>Build the basics</div></div>
-            <div style={{ background: "#ffffff0d", border: "1px solid #ffffff18", borderRadius: 16, padding: 16, minHeight: 123 }}><div style={{ color: "#8ce8c3", fontSize: 12, fontWeight: 800 }}>02 / EXPLORE</div><MessageSquareText size={23} style={{ marginTop: 17 }} /><div style={{ fontWeight: 700, marginTop: 9 }}>Ask better questions</div><div style={{ color: "#b9bbce", fontSize: 12, marginTop: 5 }}>Try prompts</div></div>
+          <div className="visual-inner" style={{ display: "grid", gap: 12, marginTop: 25 }}>
+            <div style={{ border: "1px solid #ffffff20", borderRadius: 15, padding: 16, background: "#ffffff0b", display: "flex", gap: 14, alignItems: "flex-start" }}><div style={{ fontSize: 11, fontWeight: 850, color: "#b7abff", paddingTop: 3 }}>01</div><div><div style={{ fontSize: 15, fontWeight: 750 }}>Understand AI in everyday life</div><p style={{ fontSize: 12, color: "#b9bbce", lineHeight: 1.6, marginTop: 5 }}>Start with approachable examples and clear concepts.</p></div></div>
+            <div style={{ border: "1px solid #ffffff20", borderRadius: 15, padding: 16, background: "#ffffff0b", display: "flex", gap: 14, alignItems: "flex-start" }}><div style={{ fontSize: 11, fontWeight: 850, color: "#8ce8c3", paddingTop: 3 }}>02</div><div><div style={{ fontSize: 15, fontWeight: 750 }}>Try a guided prompt activity</div><p style={{ fontSize: 12, color: "#b9bbce", lineHeight: 1.6, marginTop: 5 }}>Write instructions, compare results, and improve the question.</p></div></div>
+            <div style={{ border: "1px solid #ffffff20", borderRadius: 15, padding: 16, background: "#ffffff0b", display: "flex", gap: 14, alignItems: "flex-start" }}><div style={{ fontSize: 11, fontWeight: 850, color: "#ffd58a", paddingTop: 3 }}>03</div><div><div style={{ fontSize: 15, fontWeight: 750 }}>Check and explain the result</div><p style={{ fontSize: 12, color: "#b9bbce", lineHeight: 1.6, marginTop: 5 }}>Look for mistakes and share what was learned.</p></div></div>
           </div>
-          <div className="visual-inner hero-code" style={{ marginTop: 13 }}>
-            <div><span className="purple">goal</span> = <span className="green">&quot;solve a small problem&quot;</span></div>
-            <div><span className="purple">ask</span>(clear_question)</div><div><span className="purple">check</span>(the_answer)</div><div><span className="purple">improve</span>(your_idea)</div>
-            <div style={{ borderTop: "1px solid #ffffff17", marginTop: 9, paddingTop: 9, color: "#9ea1b8" }}>A learning process — not magic.</div>
-          </div>
-          <div className="visual-inner" style={{ display: "flex", justifyContent: "space-between", marginTop: 16, color: "#b5b7c8", fontSize: 11 }}><span>Curiosity first</span><span>Responsibility always</span></div>
+          <p className="visual-inner" style={{ fontSize: 11, color: "#9fa2ba", lineHeight: 1.6, marginTop: 17 }}>Illustrative learning flow — not a photograph or a claim about a specific completed session.</p>
         </div>
       </div>
     </section>
