@@ -22,7 +22,7 @@ export default function HomePage() {
       <div className="container home-hero-layout">
         <div>
           <div className="pill"><Sparkles size={14} /> Don&apos;t Just Learn AI. Build With It.</div>
-          <h1 className="display" style={{ marginTop: 24, maxWidth: 650 }}>Future-Ready AI Education <span style={{ color: "var(--blue)" }}>for Schools.</span></h1>
+          <h1 className="display" style={{ marginTop: 24, maxWidth: 650 }}>Making AI Make Sense <span style={{ color: "var(--blue)" }}>for Every Student.</span></h1>
           <p className="lead" style={{ maxWidth: 590, marginTop: 22 }}>Help students explore artificial intelligence through hands-on workshops, guided activities, and responsible AI learning shaped around their age group and school context.</p>
           <p className="body-copy" style={{ maxWidth: 580, marginTop: 12 }}>Students explore what AI is, practise writing prompts, examine AI-generated answers, and explain what they discover. The exact scope and session format are agreed with each school.</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 27 }}>
