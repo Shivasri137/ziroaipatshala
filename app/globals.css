@@ -15,3 +15,11 @@
 @media(max-width:760px){.container,.narrow{width:min(100% - 34px,1160px)}.section{padding:60px 0}.page-hero{padding:55px 0 45px}.grid-3,.grid-2,.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.section-heading{display:block;margin-bottom:26px}.section-heading .text-link{margin-top:12px}.desktop-nav{display:none!important}.mobile-nav{display:block}.mobile-panel{border-top:1px solid var(--line);background:white;padding:12px 18px 18px}.mobile-panel a{display:block;padding:13px 2px;color:#353849;font-size:14px;font-weight:650}.display{letter-spacing:-.055em}.home-hero-layout,.home-feature-layout,.home-founder-layout,.about-intro-layout,.about-founder-layout,.program-feature-layout,.ai-buddy-summary-layout,.ai-buddy-before-layout,.school-enquiry-layout,.contact-layout{grid-template-columns:minmax(0,1fr);gap:30px}.home-hero-layout{gap:34px}.about-founder-layout .founder-portrait{width:min(100%,320px)!important;height:330px!important;object-position:center 20%!important}.curriculum-row{grid-template-columns:minmax(0,1fr);gap:12px}.curriculum-topic-grid{grid-template-columns:minmax(0,1fr);gap:11px}.founder-mini-card{grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px}.founder-mini-card img{width:110px!important;height:150px!important}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.footer-grid>div:first-child{grid-column:1/-1}}
 @media(max-width:400px){.founder-mini-card{grid-template-columns:minmax(0,1fr)}.founder-mini-card img{width:100%!important;max-width:190px;height:210px!important}.learning-cards-layout{grid-template-columns:minmax(0,1fr)}.footer-grid{grid-template-columns:minmax(0,1fr)}.footer-grid>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Keep the primary school CTA usable when six navigation links no longer fit. */
+@media(max-width:960px){
+  .desktop-nav{display:none!important}
+  .mobile-nav{display:block}
+  .mobile-panel{border-top:1px solid var(--line);background:white;padding:12px 18px 18px}
+  .mobile-panel a{display:block;padding:13px 2px;color:#353849;font-size:14px;font-weight:650}
+}
