@@ -1,1 +1,0 @@
-Next.js App Router sources live here.
