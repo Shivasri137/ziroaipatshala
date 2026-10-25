@@ -1,0 +1,1 @@
+Temporary check: the GitHub contents endpoint accepts nested paths.
