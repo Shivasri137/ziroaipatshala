@@ -335,3 +335,42 @@ body > header, body > .route-transition, body > footer { position: relative; z-i
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   button:active, a.btn:active, .theme-toggle:active { transform: none !important; }
 }
+
+/* Final contrast pass: all inline-color content must stay readable in dark mode. */
+html[data-theme="dark"] header.site-header > .container > a > span {
+  color: #c4c7d9 !important;
+}
+html[data-theme="dark"] main [style*="color:"] {
+  color: var(--ink) !important;
+}
+html[data-theme="dark"] main .body-copy,
+html[data-theme="dark"] main .lead,
+html[data-theme="dark"] main .prose p,
+html[data-theme="dark"] main .caption,
+html[data-theme="dark"] main small {
+  color: var(--muted) !important;
+}
+html[data-theme="dark"] main .eyebrow { color: #bdb5ff !important; }
+html[data-theme="dark"] main .text-link { color: #c5beff !important; }
+html[data-theme="dark"] main .card [style*="background"]:not(.icon-tile):not(.pill):not(.btn):not(.theme-toggle) {
+  background-color: var(--surface-raised) !important;
+}
+html[data-theme="dark"] main .card [style*="border-bottom"],
+html[data-theme="dark"] main .card [style*="border-top"] {
+  border-color: var(--line) !important;
+}
+html[data-theme="dark"] main [style*="border: 1px solid"] {
+  border-color: var(--line) !important;
+}
+/* Give pointer-light a visible overlay layer while keeping links fully clickable. */
+body::before {
+  z-index: 40;
+  background: radial-gradient(420px circle at var(--cursor-x) var(--cursor-y), rgba(151,139,255,.19), rgba(103,91,241,.065) 36%, transparent 72%);
+  will-change: background;
+}
+/* Replace the old slide-in with a clean, fast fade. */
+.route-transition { animation: ziro-page-fade .18s ease-out both !important; }
+@keyframes ziro-page-fade { from { opacity: .72; } to { opacity: 1; } }
+button, a.btn, .theme-toggle {
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .14s ease !important;
+}
