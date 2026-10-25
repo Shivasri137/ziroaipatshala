@@ -9,7 +9,7 @@ export const metadata = {
   alternates: process.env.NEXT_PUBLIC_SITE_URL ? { canonical: "/testimonials" } : undefined,
 };
 
-const process = [
+const publishingSteps = [
   { icon: MessageSquareQuote, title: "Share your real experience", text: "Describe what you actually saw, learned, or found useful. Specific details are more valuable than a generic rating." },
   { icon: FileCheck2, title: "We review it with you", text: "ZIRO checks the session details, requested display name, and exact wording. We may ask a follow-up question before using it." },
   { icon: LockKeyhole, title: "Nothing goes public by default", text: "Feedback sent privately remains private unless the person with the right to consent approves the exact text for publication." },
@@ -47,7 +47,7 @@ export default function TestimonialsPage() {
           <div><span className="eyebrow">Our feedback standard</span><h2 className="heading" style={{ marginTop: 15 }}>How a testimonial earns its place.</h2><p className="body-copy" style={{ marginTop: 12 }}>The process is intentionally manual. A form submission is not an automatic public review.</p></div>
         </div>
         <div className="grid-3">
-          {process.map(item => { const Icon = item.icon; return <article key={item.title} className="card" style={{ padding: 24 }}><div className="icon-tile"><Icon size={21}/></div><h3 style={{ fontSize: 18, fontWeight: 760, lineHeight: 1.4, marginTop: 18 }}>{item.title}</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>{item.text}</p></article>; })}
+          {publishingSteps.map(item => { const Icon = item.icon; return <article key={item.title} className="card" style={{ padding: 24 }}><div className="icon-tile"><Icon size={21}/></div><h3 style={{ fontSize: 18, fontWeight: 760, lineHeight: 1.4, marginTop: 18 }}>{item.title}</h3><p className="body-copy" style={{ fontSize: 13, marginTop: 9 }}>{item.text}</p></article>; })}
         </div>
         <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "19px 0", marginTop: 22, borderTop: "1px solid #dedfe7" }}>
           <CheckCircle2 size={19} color="#4f46e5" style={{ flexShrink: 0, marginTop: 2 }}/>
