@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, BrainCircuit, Check, Lightbulb, MessageSquareText, School, ShieldCheck, Sparkles, Wrench } from "lucide-react";
+import { ArrowRight, BrainCircuit, Check, Lightbulb, MessageSquareText, School, ShieldCheck, Sparkles, Wrench } from "lucide-react";
 import { ButtonLink, CtaBand, SectionTitle } from "@/components/Ui";
 import ImpactProof from "@/components/ImpactProof";
 
