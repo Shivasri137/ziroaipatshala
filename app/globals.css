@@ -115,7 +115,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
   opacity: 0;
   background: radial-gradient(520px circle at var(--cursor-x) var(--cursor-y), rgba(111, 101, 255, .15), rgba(71, 96, 255, .055) 32%, transparent 66%);
@@ -149,3 +149,10 @@ button:active, a.btn:active, .theme-toggle:active { transform: scale(.975); }
   .route-transition, .click-ripple { animation: none !important; }
   button:active, a.btn:active, .theme-toggle:active { transform: none !important; }
 }
+
+/* Founder portrait: use the original public asset directly to avoid optimizer/cache failures. */
+.founder-photo { display: block; max-width: 100%; visibility: visible; opacity: 1; }
+body > header, body > div, body > footer { position: relative; z-index: 1; }
+/* Keep the ripple above the button fill but below its readable label/icon. */
+.click-ripple { z-index: 0; }
+button > *, a.btn > *, .theme-toggle > * { position: relative; z-index: 1; }
