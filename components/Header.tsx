@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -17,7 +18,7 @@ const links = [
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  return <header style={{ position: "sticky", top: 0, zIndex: 50, background: "#ffffffed", backdropFilter: "blur(14px)", borderBottom: "1px solid #e9e9ef" }} onKeyDown={event => { if (event.key === "Escape") setOpen(false); }}>
+  return <header className="site-header" style={{ position: "sticky", top: 0, zIndex: 50, backdropFilter: "blur(14px)" }} onKeyDown={event => { if (event.key === "Escape") setOpen(false); }}>
     <div className="container" style={{ minHeight: 78, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18 }}>
       <Link href="/" aria-label="ZIRO AI PATASHALA home" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
         <Image src="/images/ziro-logo.png" alt="ZIRO" width={71} height={82} priority style={{ width: 50, height: 58, objectFit: "contain" }} />
@@ -29,8 +30,8 @@ export default function Header() {
           return <Link key={link.href} href={link.href} aria-current={active ? "page" : undefined} style={{ fontSize: 13, fontWeight: active ? 800 : 650, color: active ? "#4338ca" : "#474959", whiteSpace: "nowrap" }}>{link.label}</Link>;
         })}
       </nav>
-      <div className="desktop-nav"><Link className="btn btn-primary" href="/school-workshops#school-enquiry">Book a Workshop <ArrowUpRight size={16} /></Link></div>
-      <div className="mobile-nav"><button type="button" className="btn btn-secondary" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-site-navigation" onClick={() => setOpen(v => !v)} style={{ minHeight: 44, minWidth: 44, padding: "0 12px" }}>{open ? <X size={20} /> : <Menu size={20} />}</button></div>
+      <div className="desktop-nav header-actions"><ThemeToggle /><Link className="btn btn-primary" href="/school-workshops#school-enquiry">Book a Workshop <ArrowUpRight size={16} /></Link></div>
+      <div className="mobile-nav mobile-header-actions"><ThemeToggle compact /><button type="button" className="btn btn-secondary" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-site-navigation" onClick={() => setOpen(v => !v)} style={{ minHeight: 44, minWidth: 44, padding: "0 12px" }}>{open ? <X size={20} /> : <Menu size={20} />}</button></div>
     </div>
     {open && <nav id="mobile-site-navigation" aria-label="Mobile navigation" className="mobile-nav mobile-panel">
       {links.map(link => {
