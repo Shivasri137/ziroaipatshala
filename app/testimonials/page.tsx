@@ -1,4 +1,5 @@
 import { CheckCircle2, FileCheck2, LockKeyhole, MessageSquareQuote } from "lucide-react";
+import Link from "next/link";
 import { CtaBand, PageHero } from "@/components/Ui";
 import FeedbackForm from "@/components/FeedbackForm";
 
@@ -35,7 +36,7 @@ export default function TestimonialsPage() {
             <h2 className="subheading" style={{ marginTop: 12 }}>What the evidence supports today</h2>
             <p className="body-copy" style={{ marginTop: 12 }}>The supplied founder brief reports four offline workshop sessions across three named school venues. It also outlines the three-day AI Buddy Den curriculum.</p>
             <p className="body-copy" style={{ marginTop: 10 }}>Verified participant totals, attendance records, measured learning gains, and approved testimonial wording were not included. They will be added only when documented.</p>
-            <div style={{ marginTop: 17 }}><a className="text-link" href="/#impact-title">See experience and measurement approach <span aria-hidden="true">→</span></a></div>
+            <div style={{ marginTop: 17 }}><Link className="text-link" href="/#impact-title">See experience and measurement approach <span aria-hidden="true">→</span></Link></div>
           </div>
         </div>
       </div>
@@ -50,7 +51,7 @@ export default function TestimonialsPage() {
         </div>
         <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "19px 0", marginTop: 22, borderTop: "1px solid #dedfe7" }}>
           <CheckCircle2 size={19} color="#4f46e5" style={{ flexShrink: 0, marginTop: 2 }}/>
-          <p className="body-copy" style={{ fontSize: 13 }}>Children's names, photos, class details, and personal information are not published without appropriate permission. Parents or guardians should provide permission for a learner under 18.</p>
+          <p className="body-copy" style={{ fontSize: 13 }}>Children&apos;s names, photos, class details, and personal information are not published without appropriate permission. Parents or guardians should provide permission for a learner under 18.</p>
         </div>
       </div>
     </section>
